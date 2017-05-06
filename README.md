@@ -1,3 +1,3 @@
 # Captain-Demorgans
 
-![alt text](project sketch.png "Description goes here")
+![alt text](project_sketch.png "Description goes here")
