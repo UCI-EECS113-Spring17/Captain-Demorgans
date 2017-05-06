@@ -1,2 +1,3 @@
 # Captain-Demorgans
-![alt text](Captain-Demorgans/project sketch.png)
+
+![alt text](project sketch.png "Description goes here")
