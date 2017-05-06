@@ -1,3 +1,3 @@
 # Captain-Demorgans
 
-![alt text](project_sketch.png "STUFF && more STUFF")
+![alt text](screenshots/sketch.png "STUFF && more STUFF")
