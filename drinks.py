@@ -6,20 +6,20 @@ class Drink:
 	# index (key) is bottle name, liquid amount (value) is in ounces 
 	__slots__ = ["drinkName","drinkList"]
 
-	def __init__(drinkName):
+	def __init__(self,drinkName):
 		self.drinkName = drinkName
 		self.drinkList = dict()
 
-	def addIngredient(bottleName, liquidAmount):
+	def addIngredient(self,bottleName, liquidAmount):
 		self.drinkList[bottleName] = liquidAmount
 
-	def getDrinkName():	
+	def getDrinkName(self):	
 		return self.drinkName
 	
-	def getIngredients():
+	def getIngredients(self):
 		ingredients = ""
-		for k, v in self.drinkList:
-			ingredients += k + ", " + v + " oz.\n"
+		for k, v in self.drinkList.items():
+			ingredients += str(k) + ", " + str(v) + " oz.\n"
 		return ingredients 
 
 		
