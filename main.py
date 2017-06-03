@@ -2,6 +2,7 @@
 from drinks import Drink
 from bottle import Bottle
 from enum import Enum
+from pynq.iop import *
 import sys
 
 # Name of Drink file to load from
@@ -79,6 +80,11 @@ def prepareDrink():
 		#sleep certian num of seconds
 		#turn off the valve
 	machineState = State.PICKUP
+	
+def checkForceSensor():
+	# check the force sensor 
+	# determine the threshold to trigger dispense state
+	pass
 		
 def main():
 	loadFile(drinkFile);
