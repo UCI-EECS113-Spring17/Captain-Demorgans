@@ -2,7 +2,7 @@
 from drinks import Drink
 from bottle import Bottle
 from enum import Enum
-from pynq.iop import *
+#from pynq.iop import *
 import sys
 
 # Name of Drink file to load from
@@ -20,7 +20,7 @@ class State(Enum):
 ingredients = [] 
 drinks = []
 #maps ingredient name to bottle
-bottleDictionay = dict()
+bottleDictionary = dict()
 # Declare Drink State	
 machineState = State(1)
 currDrink = None
@@ -69,7 +69,7 @@ def prepareDrink():
 	# iterate through the ingredients
 	# go one ingredient at a time and also the amount
 	# locate the bottle index (which vale to turn on)
-	global currDrink, machineState
+	global currDrink, machineState, bottleDictionary
 	for bottleName in currDrink.drinkList:
 		# get the bottle object
 		bottle = bottleDictionay[bottleName]
