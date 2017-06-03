@@ -68,7 +68,7 @@ def prepareDrink():
 	# iterate through the ingredients
 	# go one ingredient at a time and also the amount
 	# locate the bottle index (which vale to turn on)
-	global currDrink
+	global currDrink, machineState
 	for bottleName in currDrink.drinkList:
 		# get the bottle object
 		bottle = bottleDictionay[bottleName]
@@ -78,6 +78,7 @@ def prepareDrink():
 		#turn on the valve
 		#sleep certian num of seconds
 		#turn off the valve
+	machineState = State.PICKUP
 		
 def main():
 	loadFile(drinkFile);
