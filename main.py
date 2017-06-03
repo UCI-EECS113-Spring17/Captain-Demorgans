@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 from drinks import Drink
+from bottle import Bottle
 from enum import Enum
 import sys
 
@@ -17,9 +18,11 @@ class State(Enum):
 # Load drinks
 ingredients = [] 
 drinks = []
+#maps ingredient name to bottle
+bottleDictionay = dict()
 # Declare Drink State	
-machineState = State(1);
-
+machineState = State(1)
+currDrink = None
 # distance sensor
 # force sensor
 # valve pins for transistors
@@ -39,6 +42,7 @@ def loadFile(fname):
 			if count == 0:
 				#all ingredients on the machine
 				ingredients = lines.split('\t')
+				declareBottles(ingredients)
 			else:
 				#get drink names
 				args = lines.split('\t')
@@ -50,6 +54,31 @@ def loadFile(fname):
 					drinks[len(drinks)-1].addIngredient(args[0], args[1])
 					#print(args)
 			count += 1
+			
+#load bottles from text file
+# bottle name -> bottle
+def declareBottles(ingredients):
+	index = 0
+	bottleSize = 20
+	for i in ingredients:
+		bottleDictionary[i] = Bottle(index, i, bottleSize)
+		index += 1
+		
+def prepareDrink():
+	# iterate through the ingredients
+	# go one ingredient at a time and also the amount
+	# locate the bottle index (which vale to turn on)
+	global currDrink
+	for bottleName in currDrink.drinkList:
+		# get the bottle object
+		bottle = bottleDictionay[bottleName]
+		# get the amount to dispense
+		amount = currDrink.drinkList[bottleName]
+		sleepTime = bottle.getSleepTime(amount)
+		#turn on the valve
+		#sleep certian num of seconds
+		#turn off the valve
+		
 def main():
 	loadFile(drinkFile);
 	while(True):
