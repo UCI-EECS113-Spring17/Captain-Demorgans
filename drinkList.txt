@@ -1,22 +1,22 @@
 Lemonade	Iced Tea	Lime Soda	Peach
 Lemonade
-	Lemonade	16
+	Lemonade	8
 Iced Tea
-	Iced Tea	16
-Lime Soda
-	Lime Soda	16
-Arnold Palmer
 	Iced Tea	8
-	Lemonade	8
-Sparking Lemonade
+Lime Soda
 	Lime Soda	8
-	Lemonade	8
+Arnold Palmer
+	Iced Tea	4
+	Lemonade	4
+Sparking Lemonade
+	Lime Soda	4
+	Lemonade	4
 Peach Lemonade
-	Lemonade	14
-	Peach	2
+	Lemonade	7
+	Peach	1
 Peach Iced Tea
-	Iced Tea	14
-	Peach	2
+	Iced Tea	7
+	Peach	1
 Peach Soda
-	Lime Soda	14
-	Peach	2
+	Lime Soda	7
+	Peach	1
