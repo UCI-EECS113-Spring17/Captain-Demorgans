@@ -19,6 +19,9 @@ class State(Enum):
 # Load drinks
 ingredients = [] 
 drinks = []
+#Average flow-rate of each bottle Oz/s
+drinkConstant = [0.24, 0.243, 0.348, 0.25]
+bottleSize = [16.9 for i in range(0,4)]
 #maps ingredient name to bottle
 bottleDictionary = dict()
 # Declare Drink State	
@@ -59,10 +62,10 @@ def loadFile(fname):
 #load bottles from text file
 # bottle name -> bottle
 def declareBottles(ingredients):
+	global drinkConstant, bottleSize
 	index = 0
-	bottleSize = 20
 	for i in ingredients:
-		bottleDictionary[i] = Bottle(index, i, bottleSize)
+		bottleDictionary[i] = Bottle(index, i, bottleSize[index], drinkConstant[index])
 		index += 1
 		
 def prepareDrink():
