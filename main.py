@@ -68,7 +68,7 @@ def declareBottles(ingredients):
 		bottleDictionary[i] = Bottle(index, i, bottleSize[index], drinkConstant[index])
 		index += 1
 		
-def prepareDrink():
+def makeDrink():
 	# iterate through the ingredients
 	# go one ingredient at a time and also the amount
 	# locate the bottle index (which vale to turn on)
