@@ -20,7 +20,7 @@ class State(Enum):
 ingredients = [] 
 drinks = []
 #Average flow-rate of each bottle Oz/s
-drinkConstant = [0.24, 0.243, 0.348, 0.25]
+drinkConstant = [0.24, 0.243, 0.348, 0.365]
 bottleSize = [16.9 for i in range(0,4)]
 #maps ingredient name to bottle
 bottleDictionary = dict()
