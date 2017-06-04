@@ -120,6 +120,10 @@ def main():
 		pass
 		print(d.getDrinkName())
 		print(d.getIngredients())
+
+	for b in bottleDictionary:
+		print(bottleDictionary[b].getInfo())
 		
 if __name__ == "__main__":
     main()
+
