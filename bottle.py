@@ -17,7 +17,10 @@ class Bottle:
     return self.bottleAmount
   
   def dispense(self, liquidAmount):
-    self.bottAmount -= liquidAmount
+    if(self.bottleAmount - liquidAmount > 0):
+      self.bottleAmount -= liquidAmount
+      return True
+    return False
 
   def getInfo(self):
     info = str(self.bottleNum) + ": " + self.bottleName + "\tSize: " + str(self.bottleSize) +"\tAmount: " + str(self.bottleAmount) + "\tZZZ Time:" + str(self.sleepConstant) 
